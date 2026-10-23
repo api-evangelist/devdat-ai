@@ -1,23 +1,62 @@
 aid: devdat-ai
+
 name: DevDat.ai
-description: 'DevDat.ai is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'DevDat.ai provides data product empowerment platforms, offering customizable data solutions, analytics, and integration services for enterprises. Their mission is to accelerate digital transformation by delivering robust data pipelines, APIs, and AI-driven insights. Based in Singapore with offices in Jakarta, they serve global clients across finance, retail, and technology sectors, emphasizing security, scalability, and innovation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/devdat-ai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-23'
+
 modified: '2026-10-23'
+
 tags:
-- Company
-apis: []
+- Data
+- Platform
+- AI
+- Integration
+- Singapore
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/devdat-ai-llms.txt
+- type: Hosts
+  url: hosts/devdat-ai-hosts.yml
+- type: Vendors
+  url: vendors/devdat-ai-vendors.yml
+- type: DomainSecurity
+  url: security/devdat-ai-domain-security.yml
 - type: Website
   url: https://www.devdat.ai
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website does not expose any OpenAPI, GraphQL, AsyncAPI, gRPC, or WSDL specifications.
+  evidence:
+    - url: https://www.devdat.ai
+      status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
